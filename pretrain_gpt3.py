@@ -23,7 +23,9 @@ from datetime import datetime
 import numpy as np
 import torch
 import torch.distributed as dist
-from apex.optimizers import FusedAdam as Adam
+#from apex.optimizers import FusedAdam as Adam
+from deepspeed.ops.adam import DeepSpeedCPUAdam as Adam
+
 from torch.utils.tensorboard import SummaryWriter
 
 from src import mpu
